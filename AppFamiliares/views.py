@@ -17,4 +17,4 @@ def crear_familiares(request):
     #generando parametro para template
     info = {'abuelo':abuelo, 'abuela':abuela, 'hijo':hijo}
     
-    return render(request, "crear_familiares.html", info)
+    return render(request, "crear_familiares.html", {'info':info})

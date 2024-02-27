@@ -13,10 +13,15 @@
         <link rel="stylesheet" href="">
     </head>
     <body>
-        <p> Se han creado los familiares:<br> <!-- se daran cuenta que no pude realizar el bucle for -->
-            {{abuelo.nombre}} {{abuelo.apellido}} de {{abuelo.edad}} años<br>
-            {{abuela.nombre}} {{abuelo.apellido}} de {{abuelo.edad}} años<br>
-            {{hijo.nombre}} {{hijo.apellido}} de {{hijo.edad}} años<br>
-        </p>
+        <h1>Lista de Familiares</h1>
+        <ul>
+            {% for key, familiar in info.items %}
+                <li>
+                    <strong>Nombre:</strong> {{ familiar.nombre }} <br>
+                    <strong>Apellido:</strong> {{ familiar.apellido }} <br>
+                    <strong>Edades:</strong> {{ familiar.edad }}
+                </li>
+            {% endfor %}
+        </ul>
     </body>
 </html>
